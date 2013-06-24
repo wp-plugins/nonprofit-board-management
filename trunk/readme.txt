@@ -25,10 +25,10 @@ It’s simple.  It’s free.  And it makes managing your board a whole lot easie
 
 Along with the standard features included in the Nonprofit Board Management plugin, you can also add the following features through our premium extensions:
 
-* **[Automatic Event RSVP and Reminder Emails](http://wiredimpact.com/nonprofit-plugins/event-rsvp-reminder-emails-extension/) –** Automatically remind board members about upcoming events and allow them to RSVP directly from their email inbox
-* **[Event Attendance Tracking](http://wiredimpact.com/nonprofit-plugins/event-attendance-tracking/) -** Track event attendance and see detailed reports of every board member’s attendance
+* **[Automatic Event RSVP and Reminder Emails](http://wiredimpact.com/premium-plugins/event-rsvp-reminder-emails/) –** Automatically remind board members about upcoming events and allow them to RSVP directly from their email inbox
+* **[Event Attendance Tracking](http://wiredimpact.com/premium-plugins/event-attendance-tracking/) -** Track event attendance and see detailed reports of every board member’s attendance
 
-To see a list of all the premium extensions and learn more visit [http://wiredimpact.com/nonprofit-board-management](http://wiredimpact.com/nonprofit-board-management "Nonprofit Board Management Webpage").
+To see a list of all the premium extensions and learn more visit [http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/](http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/ "Nonprofit Board Management Webpage").
 
 **Can I see the plugin in action?**
 
@@ -96,10 +96,10 @@ If you have more questions you can always head over to http://wordpress.org/supp
 
 Along with the standard features included in Nonprofit Board Management, you can also add the following features through our premium extensions:
 
-* **[Automatic Event RSVP and Reminder Emails](http://wiredimpact.com/nonprofit-plugins/event-rsvp-reminder-emails-extension/) –** Automatically remind board members about upcoming events and allow them to RSVP directly from their email inbox
-* **[Event Attendance Tracking](http://wiredimpact.com/nonprofit-plugins/event-attendance-tracking/) -** Track event attendance and see detailed reports of every board member’s attendance
+* **[Automatic Event RSVP and Reminder Emails](http://wiredimpact.com/premium-plugins/event-rsvp-reminder-emails/) –** Automatically remind board members about upcoming events and allow them to RSVP directly from their email inbox
+* **[Event Attendance Tracking](http://wiredimpact.com/premium-plugins/event-attendance-tracking/) -** Track event attendance and see detailed reports of every board member’s attendance
 
-To see a list of all the premium extensions and learn more visit [http://wiredimpact.com/nonprofit-board-management](http://wiredimpact.com/nonprofit-board-management "Nonprofit Board Management Webpage").
+To see a list of all the premium extensions and learn more visit [http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/](http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/ "Nonprofit Board Management Webpage").
 
 
 == Screenshots ==
