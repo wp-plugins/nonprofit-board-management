@@ -3,7 +3,7 @@
 Plugin Name: Nonprofit Board Management
 Plugin URI: http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/ ‎
 Description: A simple, free way to manage your nonprofit’s board.
-Version: 1.0.2
+Version: 1.0.3
 Author: Wired Impact
 Author URI: http://wiredimpact.com
 License: GPLv3
@@ -338,6 +338,7 @@ class WI_Board_Management {
           <?php } ?>
         </h2>
         
+        <?php $this->display_num_board_members(); ?>
         <?php do_action( 'winbm_before_members_table' ); ?>
         
         <table class="wp-list-table widefat fixed posts" id="board-members-table" cellspacing="0">
@@ -418,6 +419,23 @@ class WI_Board_Management {
         </p>
       </div>
     <?php }//display_members_page()
+    
+    
+    /*
+     * Display the number of board members to be used above a table.
+     */
+    public function display_num_board_members(){
+      $board_member_count = count( $this->board_members );
+      ?>
+      <div class="tablenav">
+        <div class="tablenav-pages">
+          <span class="displaying-num">
+            <?php printf( _n( '1 Board Member', '%s Board Members', $board_member_count, 'nonprofit-board-management' ), number_format_i18n( $board_member_count ) ); ?>
+          </span>
+        </div>
+      </div>
+      <?php
+    }
 
     
     /*
@@ -467,7 +485,7 @@ class WI_Board_Management {
             <p><a href="https://www.dropbox.com/" target="_blank">Dropbox</a> – <?php _e( 'A great way to share files.', 'nonprofit-board-management' ); ?></p>
             <p><a href="https://drive.google.com/" target="_blank">Google Drive</a> – <?php _e( 'A good way to share and collaborate on documents.', 'nonprofit-board-management' ); ?></p>
             <p><a href="http://nonprofits.linkedin.com/" target="_blank">LinkedIn Board Member Connect</a> – <?php _e( 'A tool to find great talent to join your board.', 'nonprofit-board-management' ); ?></p>
-            <p><a href="http://wiredimpact.com/" target="_blank">Wired Impact</a> – <?php _e( 'Library articles and blog posts on how nonprofits can use the web to do more good.', 'nonprofit-board-management' ); ?></p>
+            <p><a href="http://wiredimpact.com?utm_source=wordpress_admin&utm_medium=board_resources&utm_campaign=nonprofit_board_management" target="_blank">Wired Impact</a> – <?php _e( 'Library articles and blog posts on how nonprofits can use the web to do more good.', 'nonprofit-board-management' ); ?></p>
 
             <?php do_action( 'winbm_in_helpful_resources' ); ?>
 
