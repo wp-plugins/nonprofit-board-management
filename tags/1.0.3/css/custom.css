@@ -1,0 +1,214 @@
+/********************************
+* General Board Mgmt
+********************************/
+.wrap #icon-nonprofit-board,
+.wrap #icon-board-mgmt,
+.wrap #icon-edit.icon32-posts-board_events,
+.wrap #icon-edit.icon32-posts-board_committees {
+  background: url('images/nonprofit-board-gavel.png') no-repeat 0 0;
+}
+li.toplevel_page_nonprofit-board .wp-menu-image {
+  overflow: hidden;
+}
+#adminmenu li.toplevel_page_nonprofit-board img {
+  margin-top: -35px;
+  padding: 7px 0 0 2px;
+}
+#adminmenu li.toplevel_page_nonprofit-board:hover img,
+#adminmenu li.wp-has-current-submenu.toplevel_page_nonprofit-board img {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/********************************
+* Board Events
+********************************/
+/* Event Meta Fields */
+.board-event-meta #event-description {
+  width: 25em;
+}
+.board-event-meta .error{
+  color: #f00;
+}
+
+/* Datepicker styles */
+body .ui-datepicker-calendar .ui-state-highlight {
+  border: 1px solid #fff;
+  background: #fff;
+}
+body .ui-datepicker-calendar .ui-state-active {
+  background: #21759b;
+  color: #fff;
+}
+
+/* Timepicker jQuery Add-On */
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+/* Board Events List */
+#the-list #attending {
+  margin: 0 5px 5px 0;
+}
+#the-list .button-primary.active {
+  cursor: default;
+}
+
+/*RSVP Meta Box*/
+#board_event_rsvps h4 {
+  margin-bottom: .25em;
+}
+#board_event_rsvps .rsvp-link {
+  font-style: italic;
+}
+
+/********************************
+* Board Committees
+********************************/
+.committee-description-meta textarea {
+  width: 25em;
+}
+
+/********************************
+* Board Members List & Attendance Table
+********************************/
+#board-attendance-table {
+  margin-top: 20px;
+}
+#board-members-table .column-username,
+#board-attendance-table .column-username {
+  padding-bottom: 4px;
+}
+.member-attendance {
+  font-weight: normal;
+}
+
+/********************************
+* Attendance Tracking
+********************************/
+#board-attendance-table .row-actions {
+  visibility: visible;
+}
+#board_event_attendance tr input {
+  margin-left: 8px;
+}
+#board_event_attendance p {
+  font-style: italic;
+}
+
+/********************************
+* General Board Styles
+********************************/
+#icon-nonprofit-board {
+  background-image: url('../../../../wp-admin/images/icons32.png?ver=20121105');
+  background-position: -492px -5px;  
+}
+.winbm-ext-sidebar {
+  width: 241px;
+}
+.winbm-ext-sidebar .upgrade-heading {
+  margin-bottom: 18px;
+}
+.winbm-ext-sidebar a.ext {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  line-height: 0;
+}
+.winbm-ext-sidebar a.ext:before {
+  background: none;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -moz-transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+.winbm-ext-sidebar a.ext:hover:before {  
+  background: rgba(98,154,195, 0.3);  
+}
+.winbm-ext-sidebar a.ext.event-emails:hover:before {
+  background: rgba(143,39,42, 0.3);  
+}
+.winbm-ext-sidebar a.wi {
+  margin-top: 15px;
+}
+.winbm-ext-sidebar a.ext.wi:hover:before {
+  background: none; 
+}
+
+/********************************
+* Dashboard Widgets
+********************************/
+#board_members_db_widget table th {
+  padding: 3px 7px 2px;
+}
+#board_committees_db_widget p {
+  margin-top: 0;
+}
+#board_events_db_widget span.title {
+  font-size: 13px;
+  line-height: 1.7em;
+  font-family: Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+}
+#board_events_db_widget span.start-time {
+  color: #999;
+  font-size: 12px;
+  margin-left: 3px;
+}
+#board_events_db_widget div.location {
+  margin-bottom: 1em;
+}
+
+/********************************
+* Board Resources
+********************************/
+.winbm-resources-wrap {
+  width: 600px;
+  padding: 0 20px 0 0;
+}
+.board-resources h3 a {
+  font-weight: normal;
+}
+.custom-board-resources ul {
+  list-style: disc outside;
+  margin-left: 2em;
+}
+#edit-resources-editor {
+  margin-right: 300px;
+}
+.edit-board-resources #poststuff {
+  float: right;
+  width: 280px;
+}
+.edit-board-resources .postbox .hndle {
+  cursor: default;
+  color: #000;
+}
+
+/********************************
+* Support
+********************************/
+.winbm-support-wrap {
+  width: 600px;
+  padding: 0 20px 0 0;
+}
+.support-heading span {
+  font-weight: bold;
+}
+.support-content.hide {
+  display: none;
+}
