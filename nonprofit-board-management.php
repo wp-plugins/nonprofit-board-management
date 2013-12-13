@@ -3,7 +3,7 @@
 Plugin Name: Nonprofit Board Management
 Plugin URI: http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/?utm_source=wordpress_admin&utm_medium=plugins_page&utm_campaign=nonprofit_board_management
 Description: A simple, free way to manage your nonprofit’s board.
-Version: 1.0.5
+Version: 1.1.0
 Author: Wired Impact
 Author URI: http://wiredimpact.com/?utm_source=wordpress_admin&utm_medium=plugins_page&utm_campaign=nonprofit_board_management
 License: GPLv3
@@ -32,7 +32,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * @package Nonprofit Board Management
  *
- * @version 1.0
+ * @version 1.1.0
  * @author Wired Impact
  */
 class WI_Board_Management {
@@ -80,6 +80,9 @@ class WI_Board_Management {
         
         //Redirect board members to dashboard on login.
         add_filter( 'login_redirect', array( $this, 'redirect_to_dashboard' ), 10, 3 );
+        
+        //Create shortcode to list board members on pages and posts
+        add_shortcode( 'list_board_members', array( $this, 'list_board_members_shortcode' ) );
     }
     
     
@@ -279,7 +282,8 @@ class WI_Board_Management {
         'load_spinner_html' => '<span class="waiting spinner" style="display: none;"></span>',
         'error_see_attendees' => __( 'Woops. We weren\'t able to show you the attendees.  Please contact support.', 'nonprofit-board-management' ),
         'expand_board_menu' => $screen->expand_board_menu, //Send whether we should expand the board mgmt menu
-        'editing_board_member_profile' => $editing_board_member_profile
+        'editing_board_member_profile' => $editing_board_member_profile,
+        'bio_frontend_message' => __( ' You only need to fill this out if all board members will be listed on the public website.', 'nonprofit-board-management' )
         ), $screen )
        );
     }
@@ -290,7 +294,14 @@ class WI_Board_Management {
      */
     public function create_menu(){
       //Create top level menu item
-      add_menu_page( __( 'Nonprofit Board Management', 'nonprofit-board-management' ), __( 'Board Mgmt', 'nonprofit-board-management' ), 'view_board_content', 'nonprofit-board', '', BOARD_MANAGEMENT_PLUGINFULLURL . 'css/images/nonprofit-board-gavel-menu.png'  );
+      global $wp_version;
+      if( version_compare( $wp_version, '3.8RC2' ) >= 0 ){
+        $plugin_image = ''; //Use a CSS-based SVG if we're using MP6 with 3.8 or higher
+      }
+      else {
+        $plugin_image = BOARD_MANAGEMENT_PLUGINFULLURL . 'css/images/nonprofit-board-gavel-menu.png'; //Load image for older WordPress versions
+      }
+      add_menu_page( __( 'Nonprofit Board Management', 'nonprofit-board-management' ), __( 'Board Mgmt', 'nonprofit-board-management' ), 'view_board_content', 'nonprofit-board', '', $plugin_image );
       
       //Create Board Members page
       add_submenu_page( 'nonprofit-board', __( 'Board Members', 'nonprofit-board-management' ), __( 'Board Members', 'nonprofit-board-management' ), 'view_board_content', 'nonprofit-board', array( $this, 'display_members_page' ) );
@@ -524,6 +535,9 @@ class WI_Board_Management {
         <h2><?php _e( 'Edit Your Board Resources', 'nonprofit-board-management' ); ?></h2>
         <p><?php _e( 'Edit the content in your board resources section.', 'nonprofit-board-management' ); ?></p>
         <form method="post" action="">
+        <div id="edit-resources-editor">
+          <?php wp_editor( stripslashes( get_option( 'board_resources_content' ) ), 'board_resources', array( 'teeny' => true ) ); ?>
+        </div><!-- /edit-resources-editor -->
         <div id="poststuff">
           <div class="postbox">
             <h3 class="hndle">
@@ -537,9 +551,6 @@ class WI_Board_Management {
             </div>
           </div><!-- /postbox -->
         </div><!-- /poststuff -->
-        <div id="edit-resources-editor">
-          <?php wp_editor( stripslashes( get_option( 'board_resources_content' ) ), 'board_resources', array( 'teeny' => true ) ); ?>
-        </div><!-- /edit-resources-editor -->
         <?php $board_resources_nonce = wp_create_nonce( 'board_resources_nonce' ); ?>
         <input type="hidden" id="board_resources_nonce" name="board_resources_nonce" value="<?php echo $board_resources_nonce; ?>" />
         </form>
@@ -635,6 +646,11 @@ class WI_Board_Management {
           <div class="support-content hide">
             <iframe width="600" height="338" src="https://www.youtube.com/embed/XsXXEHAs9TU" frameborder="0" allowfullscreen></iframe>
           </div>
+          
+          <h3><a class="support-heading" href="#"><span>+ </span><?php _e( 'How to List Your Board Members on Your Public Website', 'nonprofit-board-management' ); ?></a></h3>
+          <div class="support-content hide">
+            <iframe width="600" height="338" src="https://www.youtube.com/embed/kYdP0dtueEE" frameborder="0" allowfullscreen></iframe>
+          </div>
 
           <?php do_action( 'winbm_at_support_end' ); ?>
         </div><!-- /winbm-support-wrap -->
@@ -706,18 +722,18 @@ class WI_Board_Management {
       ?>
       <div class="postbox-container winbm-ext-sidebar">    
         
-        <img class="upgrade-heading" src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/board-management-upgrades.png" width="241" height="50" />
+        <img class="upgrade-heading" src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/board-management-upgrades.png" width="240" height="50" />
         
         <?php do_action( 'winbm_at_sidebar_early' ); ?>
         
         <a class="ext event-emails" href="http://wiredimpact.com/premium-plugins/event-rsvp-reminder-emails/?utm_source=wordpress_admin&utm_medium=sidebar&utm_campaign=nonprofit_board_management" target="_blank">
-          <img src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/event-emails-extension.jpg" width="241" height="221" />
+          <img src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/event-emails-extension.jpg" width="240" height="220" />
         </a>
         <a class="ext" href="http://wiredimpact.com/premium-plugins/event-attendance-tracking/?utm_source=wordpress_admin&utm_medium=sidebar&utm_campaign=nonprofit_board_management" target="_blank">
-          <img src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/event-attendance-extension.jpg" width="241" height="221" />
+          <img src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/event-attendance-extension.jpg" width="240" height="220" />
         </a>
         <a class="ext wi" href="http://wiredimpact.com?utm_source=wordpress_admin&utm_medium=sidebar&utm_campaign=nonprofit_board_management" target="_blank">
-          <img src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/plugins-wired-impact.png" width="241" height="74" />
+          <img src="<?php echo BOARD_MANAGEMENT_PLUGINFULLURL; ?>images/plugins-wired-impact.png" width="240" height="74" />
         </a>
         
         <?php do_action( 'winbm_at_sidebar_end' ); ?>
@@ -859,6 +875,77 @@ class WI_Board_Management {
       else{
         return $redirect_to;
       }
+    }
+    
+    
+    /*
+     * List the board members through the [list_board_members] shortcode.
+     * 
+     * Display list of board members on website posts or pages by using the
+     * [list_board_members] shortcode within the content.  The content displayed
+     * can be customized by copying templates/list-board-members.php to the active theme's
+     * folder and adjusting.
+     * 
+     * @return string HTML to display all the board information pulled from the template.
+     */
+    public function list_board_members_shortcode(){
+      $board_members = $this->get_users_who_serve();
+      
+      ob_start();
+      include( $this->get_template( 'list-board-members' ) );
+      $html = ob_get_clean();
+      
+      return apply_filters( 'winbm_list_members_shortcode', $html, $board_members ) ;
+    }
+    
+    
+    /*
+     * Load proper template from our templates folder or from the chosen theme directory.
+     * 
+     * We check if the chosen template exists within the active theme.  If yes, we load that
+     * template.  If not, we load the default template provided by our plugin.
+     * 
+     * @param string File name of template file we're looking for.
+     * @return string Template location either in plugin folder or in active theme folder.
+     */
+    private function get_template( $template ) {
+
+       //Get the template slug
+       $template_slug = rtrim( $template, '.php' );
+       $template = $template_slug . '.php';
+
+       //Check if a custom template exists in the theme folder, if not, load the plugin template file
+       if ( $theme_file = locate_template( array( $template ) ) ) {
+           $file = $theme_file;
+       }
+       else {
+           $file = BOARD_MANAGEMENT_PLUGINFULLPATH . '/templates/' . $template;
+       }
+
+       return apply_filters( 'winbm_template' . $template, $file );
+    }
+     
+    
+    /*
+     * Check if a valid gravatar exists so we don't have to show the default.
+     * 
+     * @param string The email address of the user.
+     * @return bool True if an avatar exists, false if not.
+     */
+    private function validate_gravatar( $user_email ) {
+      //Craft a potential url and test its headers
+      $hash = md5( strtolower( trim( $user_email ) ) );
+      $uri = 'http://www.gravatar.com/avatar/' . $hash . '?d=404';
+      $headers = @get_headers($uri);
+      
+      if (!preg_match("|200|", $headers[0])) {
+        $has_valid_avatar = FALSE;
+      }
+      else {
+        $has_valid_avatar = TRUE;
+      }
+      
+      return $has_valid_avatar;
     }
 } //WI_Board_Management
 

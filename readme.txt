@@ -2,7 +2,7 @@
 Contributors: wiredimpact 
 Tags: nonprofits, boards, non profits, non-profits, directors, 501c3, 501(c)3, board governance
 Requires at least: 3.0
-Tested up to: 3.6
+Tested up to: 3.8
 Stable tag: trunk
 License: GPLv3
 License URI: http://www.gnu.org/licenses/lgpl-3.0.html
@@ -88,6 +88,13 @@ Here are some frequently asked questions about how to use the plugin.
 
 [youtube http://www.youtube.com/watch?v=XsXXEHAs9TU]
 
+= How do you list your board members on your public website? =
+
+[youtube https://www.youtube.com/watch?v=kYdP0dtueEE]
+
+If you're comfortable working with code, you can customize the information that displays by copying and editing the template 
+file located at `wp-content/plugins/nonprofit-board-management/templates/list-board-members.php` to your website's active theme.
+
 = How do you get more help? =
 
 If you have more questions you can always head over to http://wordpress.org/support/plugin/nonprofit-board-management and fill out a support request.
@@ -112,6 +119,12 @@ To see a list of all the premium extensions and learn more visit [http://wiredim
 
 
 == Changelog ==
+
+= 1.1.0 = 
+* Added an updated menu icon for the new admin design.
+* Adjusted styles of the Board Management Upgrades sidebar to match the new admin design.
+* Added the ability to show a list of your board members publicly by using the [list_board_members] shortcode.
+* Other compatibility changes for WordPress 3.8
 
 = 1.0.5 =
 * Fixed bug causing phone numbers not to save for board members.
