@@ -1,149 +1,119 @@
-=== Nonprofit Board Management ===
+=== Simple Razoo Donations ===
 Contributors: wiredimpact 
-Tags: nonprofits, boards, non profits, non-profits, directors, 501c3, 501(c)3, board governance
-Requires at least: 3.0
-Tested up to: 3.8
+Tags: razoo, donation, shortcode, donate, forms
+Requires at least: 2.8
+Tested up to: 3.9
 Stable tag: trunk
-License: GPLv3
-License URI: http://www.gnu.org/licenses/lgpl-3.0.html
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A simple, free way to manage your nonprofit’s board.
+Simple Razoo Donations allows you to easily embed the Razoo Donation Widget and accept donations on your website without typing a line of code.
 
 == Description ==
 
-It’s simple.  It’s free.  And it makes managing your board a whole lot easier.
+**Why is the Simple Razoo Donations Plugin Helpful?**
 
-**Why is the Nonprofit Board Management plugin helpful?**
+* You can easily include the [Razoo Donation Widget](http://www.razoo.com/p/donationWidget "Razoo Donation Widget") on your website and start accepting donations without typing any code at all.
+* You can place the donation form into the middle of any post or page using a button within the WordPress editor.  The donation form is added right into the editor as a WordPress shortcode that looks like "[razoo_donation_form]".
+* The detailed settings page allows you to easily update the content, design and donation options.
+* Since the donation form is embedded within the settings page, you can see any adjustments immediately after making updates and saving your changes.
+* We include simple instructions on how to get up and running to start accepting donations online.
+* You can use shortcode attributes to customize individual donation forms for different locations on your website.
+* We promise to respond to every support request, period.
 
-* **Easily See Board Member Info -** You can easily see a list of everyone on the board including their name, phone number, email address, all the committees they serve on, and a picture of each member.
-* **Post Upcoming Events and Accept RSVPs -** You can list all of your upcoming events, easily get directions to each event and see which board members have RSVPed to attend.
-* **Find Who’s On Each Committee -** You can see a complete list of every committee on the board and who serves on each committee.
-* **Access Important Board Resources -** A customizable section for board members to find links to documents such as meeting minutes or bylaws, notes for board members, or any other content you think is helpful.
-* **Get Support via Video –** We’ve included a variety of support videos that walk you through all the major features, making it easy to find help when you need it.
+**Clearing Up Confusion About the Term "Widget"**
 
-**How can you add awesome features?**
+We want to clear up any confusion about the name given to the donation form by Razoo. The name "Razoo Donation Widget" includes the word widget, but that does not refer to a WordPress widget. There is no widget functionality included with this plugin.
 
-Along with the standard features included in the Nonprofit Board Management plugin, you can also add the following features through our premium extensions:
+**Thanks**
 
-* **[Automatic Event RSVP and Reminder Emails](http://wiredimpact.com/premium-plugins/event-rsvp-reminder-emails/) -** Automatically remind board members about upcoming events and allow them to RSVP directly from their email inbox
-* **[Event Attendance Tracking](http://wiredimpact.com/premium-plugins/event-attendance-tracking/) -** Track event attendance and see detailed reports of every board member’s attendance
+A special thanks to [Zaus](http://profiles.wordpress.org/zaus/) and [AtlanticBT](http://profiles.wordpress.org/atlanticbt/) for providing the foundation for this plugin.
 
-To see a list of all the premium extensions and learn more visit [http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/](http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/ "Nonprofit Board Management Webpage").
+**Visit the Plugin's Webpage**
 
-**Can I see the plugin in action?**
-
-Of course you can.  Here you go.
-
-[youtube http://www.youtube.com/watch?v=LF3LnqR1JMs]
+For more details about using the plugin visit [http://wiredimpact.com/simple-razoo-donations/](http://wiredimpact.com/simple-razoo-donations/ "Simple Razoo Donations Webpage").
 
 
 == Installation ==
 
 **How Do I Install the Plugin?**
 
-The easiest way to install the Nonprofit Board Management plugin is to go to Plugins >> Add New in the WordPress backend and search for "Nonprofit Board Management." On the far right side of the search results, click "Install." If that doesn't work follow the steps below:
+The easiest way to install the Simple Razoo Donations plugin is to go to Plugins >> Add New in the WordPress backend and search for "Simple Razoo Donations." On the far right side of the search results, click "Install."  If that doesn't work follow the steps below.
 
-1.	Download the Nonprofit Board Management plugin and unzip the files.
-1.	Upload the nonprofit-board-management folder to the /wp-content/plugins/ directory.
-1.	Activate the Nonprofit Board Management plugin through the "Plugins" menu in WordPress. 
+1. Download the Simple Razoo Donations plugin and unzip the files.
+1. Upload the simple-razoo-donations folder to the /wp-content/plugins/ directory.
+1. Activate the Simple Razoo Donations plugin through the "Plugins" menu in WordPress.
 
-**How do you get started using Nonprofit Board Management?**
+**How Do I Add the Donation Form to My Website?**
 
-[youtube http://www.youtube.com/watch?v=j1EHA5T4rQA]
+Now that you've installed the plugin you're ready to add the donation form to your website.  To do so, follow the steps outlined here.
+
+1. Configure your donation form settings by going to Settings >> Simple Razoo Donations in the WordPress backend.
+1. Place your cursor within the WordPress editor's text where you want the Razoo donation form to be added.
+1. Click the Razoo icon in the WordPress editor toolbar (looks like a globe broken into pieces). The Razoo shortcode reading "[razoo_donation_form]" will be added in the editor.
+1. Click the blue "Publish" or "Update" button to save your changes and add the Razoo donation form to your live website.
 
 
 == Frequently Asked Questions ==
 
 Here are some frequently asked questions about how to use the plugin.
 
-= How do you get started with Nonprofit Board Management? =
+= What do I need to do if I've never used Razoo before? =
 
-[youtube http://www.youtube.com/watch?v=j1EHA5T4rQA]
+If you've never used Razoo before to collect donations it's probably best to find your organization by searching at [http://www.razoo.com/search](http://www.razoo.com/search "Razoo Search") and claim the admin access on your organization's page.
 
-= How do you add a board member? =
+By default, Razoo lists all 501(c)(3) organizations registered with the IRS, but if your organization isn't listed check out [http://www.razoo.com/p/faqs_nonprofits#getting_listed](http://www.razoo.com/p/faqs_nonprofits#getting_listed "Razoo Getting Listed") for instructions on how to add your nonprofit.
 
-[youtube http://www.youtube.com/watch?v=kCwsqWrwkaA]
+= How do I customize the donation form for different pages? =
 
-= How do you change your personal information? =
+If you want to put different versions of the donation form on different pages of your website, you can use shortcode attributes to override the default options you provided on the settings page. You only need to include attributes for the defaults you wish to override. For example, if every donation should go to the same organization, you will never need to use the "id" attribute in your shortcode. An example shortcode with all attributes looks like this:
 
-[youtube http://www.youtube.com/watch?v=GPwL7A-3d-M]
+`[razoo_donation_form id="United-Way-of-America" title="Support United Way" short_description="Help us help the community" long_description="United Way has been supporting communities since the late 1800s and now supports communities in countries around the world." color="#000000" image="true" donation_options="20=Donor|30=Sponsor|50=All Star Contributor"]`
 
-= How do you serve on the board as a WordPress admin? =
+Here is a breakdown of how to use each attribute:
 
-[youtube http://www.youtube.com/watch?v=ZYYaIFYtG88]
+* id: The ID for your organization according to Razoo. When on your organization's landing page it's the text that comes right after "/story/" in the URL. For example, the United Way of America's ID is "United-Way-Of-America". You can view their ID at [http://www.razoo.com/story/United-Way-Of-America](http://www.razoo.com/story/United-Way-Of-America "United Way of America at Razoo").
+* title: The title will show up in big letters at the top of the donation form.
+* short_description: A short description of your organization or an ask for people to donate. This text shows up just below the title.
+* long_description: This is also called the "more info" section and can be much longer, describing more about your organization and where the donors' money will go. This text shows up when users click the "More info" link on the donation form.
+* color: Provide the color you want for the donation form in [hexadecimal format (#000000)](http://www.w3schools.com/html/html_colors.asp "Hexadecimal Tutorial"). You should match this closely to your website's colors.
+* image: use "true" to show the main image for your organization on the donation form.
+* donation_options: Add the donation options you want to offer potential donors within a pipe (|) separated list of values and labels (ie. donation_options="20=Donor|30=Sponsor|50=All Star Contributor")
 
-= How do you add a board event? =
+= How do I use the shortcode in a template file? =
 
-[youtube http://www.youtube.com/watch?v=TfQIeeIVyt8]
+To add the shortcode directly to a template file use the code:
 
-= How do you RSVP to a board event? =
-
-[youtube http://www.youtube.com/watch?v=Nk6blZ3Zopc]
-
-= How do you create a committee and add committee members? =
-
-[youtube http://www.youtube.com/watch?v=yInKtr36Y5s]
-
-= How do you edit your board resources? =
-
-[youtube http://www.youtube.com/watch?v=XsXXEHAs9TU]
-
-= How do you list your board members on your public website? =
-
-[youtube https://www.youtube.com/watch?v=kYdP0dtueEE]
-
-If you're comfortable working with code, you can customize the information that displays by copying and editing the template 
-file located at `wp-content/plugins/nonprofit-board-management/templates/list-board-members.php` to your website's active theme.
-
-= How do you get more help? =
-
-If you have more questions you can always head over to http://wordpress.org/support/plugin/nonprofit-board-management and fill out a support request.
-
-= How can you add some other awesome features? =
-
-Along with the standard features included in Nonprofit Board Management, you can also add the following features through our premium extensions:
-
-* **[Automatic Event RSVP and Reminder Emails](http://wiredimpact.com/premium-plugins/event-rsvp-reminder-emails/) –** Automatically remind board members about upcoming events and allow them to RSVP directly from their email inbox
-* **[Event Attendance Tracking](http://wiredimpact.com/premium-plugins/event-attendance-tracking/) -** Track event attendance and see detailed reports of every board member’s attendance
-
-To see a list of all the premium extensions and learn more visit [http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/](http://wiredimpact.com/nonprofit-plugins/nonprofit-board-management/ "Nonprofit Board Management Webpage").
+`<?php echo do_shortcode('[razoo_donation_form]'); ?>`
 
 
 == Screenshots ==
 
-1. A list of all of your board members with contact info
-2. Every board committee including who serves on each
-3. Upcoming board events with buttons to RSVP for each event
-4. Editable board resources to provide content and links for board members
-5. Support videos embedded within the plugin to help you along the way
+1. Razoo donation form outputted on a website
+2. Settings page for your organization's defaults
+3. WordPress editor button to add the donation form
+4. Shortcode appears after you click the Razoo button on the editor
 
 
 == Changelog ==
 
-= 1.1.0 = 
-* Added an updated menu icon for the new admin design.
-* Adjusted styles of the Board Management Upgrades sidebar to match the new admin design.
-* Added the ability to show a list of your board members publicly by using the [list_board_members] shortcode.
-* Other compatibility changes for WordPress 3.8
+= 0.1.3 =
+* Upgraded to the new WordPress color picker.
+* Added in further instructions on what to do if you've never used Razoo before.
 
-= 1.0.5 =
-* Fixed bug causing phone numbers not to save for board members.
+= 0.1.2 =
+* Removed duplicate calling of a javascript file for the settings page.
 
-= 1.0.4 =
-* Fixed bug that showed a board member's previous RSVP on the next event on the Board Events page.
-* Updated the demo video for the WordPress plugin repository.
+= 0.1.1 =
+* Fixed "Settings" link on plugins page to point correctly.
 
-= 1.0.3 =
-* Now showing the total number of board members above the Board Members table.
-* Updated wiredimpact.com URL in the Board Resources Helpful Resources section.
-
-= 1.0.2 = 
-* Fixed premium extension URLs for sidebar on support and board resources pages.
-
-= 1.0.1 =
-* Updated WordPress.org URLs to match the wiredimpact.com website.
-
-= 1.0 =
-* Initial release.
+= 0.1 =
+* Initial release
 
 == Upgrade Notice ==
+
+= 0.1.2 =
+Upgrade to avoid possible issues with other plugins that load javascript in the admin side of WordPress.
+
+= 0.1.1 =
+This version fixes bug where "Settings" link on plugins page didn't point correctly.
